@@ -1,18 +1,21 @@
 import React, { useState } from 'react'
+import { AddCategory } from './components/AddCategory';
 
 export const GifExpertApp = () => {
- //    const categorias = ['Empleado' , 'Administrador' , 'Mayordomo']
+ //    const categorias = ['Empleado' , 'Administrador' , 'Mayordomo'];
     const [categorias, setCategories] = useState(['Empleado' , 'Administrador' , 'Mayordomo']);
-    const handleAdd = () => {
+   /*const handleAdd = () => {
        // setCategories([...categorias , 'Programador']);
        setCategories(cats => [...cats , 'Programador']);
-    }
+    }*/
     
     return (
         <>
             <h2>GifExpertApp</h2>
+            <AddCategory/>
             <hr />
-            <button onClick = {handleAdd}>Agregar Ocupattion</button>
+         
+
             <ul>
                 {
                     categorias.map ( category  => {
