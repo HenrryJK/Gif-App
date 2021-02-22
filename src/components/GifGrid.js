@@ -9,29 +9,25 @@ export const GifGrid = ({category}) => {
     // ejemplo de useFecth 
     // const state = useFetchGifs(); 
     // const {data , loading} = useFetchGifs(); 
-    const {  loading} = useFetchGifs();
+    const { data:images, loading} = useFetchGifs(category);
   //  console.log(state);
-
-
     // tiene un arreglo vacio ([]);
    /* const [images, setImages] = useState([]);
     useEffect(() => { 
         GetGifs(category).then(setImages);
      //  GetGifs(category).then(imgs => setImages(imgs));
     } , [category])*/
-
-   
     // GetGifs();
     return (
         <>
           <h3>{ category }</h3>
 
-          { loading ? 'Cargando.....' : 'Data cargada..!'}
-      { /*   <div className="card-grid">
+         {loading && <p>Loading</p>}
+      {   <div className="card-grid">
         
-                    {/*
+                    {
                         //  images
-                    images.map( img =>  (
+                        images.map( img =>  (
                         <GifGridItem  
                         key={img.id}
                        {...img}
@@ -39,8 +35,7 @@ export const GifGrid = ({category}) => {
                     ))
                     }
                  
-                  </div> */}
-    
+                  </div>}
           </>
           /*    <h3>{count}</h3>
             <button onClick={() => setcount(count + 1 )}></button>*/
