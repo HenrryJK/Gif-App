@@ -9,7 +9,7 @@ export const AddCategory = ({setCategories}) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (imputValue.trim().length > 2) {
-             setCategories(cats => [...cats , imputValue]);
+             setCategories(cats => [imputValue ,...cats ,]);
              setImputValue('');
         }
        
