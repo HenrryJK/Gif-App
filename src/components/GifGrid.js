@@ -27,8 +27,10 @@ export const GifGrid = ({category}) => {
     }
     // GetGifs();
     return (
-        <div>
+        <>
           <h3>{ category }</h3>
+        <div className="card-grid">
+        
                     {
                         //  images
                     images.map( img =>  (
@@ -40,7 +42,10 @@ export const GifGrid = ({category}) => {
                     }
                  
         </div>
-    /*    <h3>{count}</h3>
+    
+          </>
+          /*    <h3>{count}</h3>
             <button onClick={() => setcount(count + 1 )}></button>*/
     )
+  
 }
